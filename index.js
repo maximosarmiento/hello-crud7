@@ -12,8 +12,7 @@ const db   = process.env.MONGODB_URI || 'mongodb://localhost/notas';
 const app = express();
 
 // conexion a la base de datos
-mongoose.set('useUnifiedTopology', true);
-mongoose.set('useFindAndModify', false);
+
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => {
